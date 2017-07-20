@@ -134,3 +134,16 @@ button:focus {
 .newQuote {
   float: right;
 }
+
+.githubLink {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: underline;
+  font-size: 17px;
+  color: #0769ad;
+}
+
+.githubLink:hover {
+  color: #0769ad;
+}
