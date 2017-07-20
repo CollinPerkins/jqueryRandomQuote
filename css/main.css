@@ -98,7 +98,7 @@ button:focus {
 }
 
 .quote {
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 600;
 }
 
@@ -113,11 +113,24 @@ button:focus {
 }
 
 .twitterBtn {
+  display: inline-block;
   font-size: 34px;
   padding: 0px 3px;
   max-height: 38px;
+  color: black;
+  background-color: #0769ad;
 }
 
-.newQuoteBtn {
+.twitterBtn:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.twitterBtn:focus {
+  text-decoration: none;
+  color: black;
+}
+
+.newQuote {
   float: right;
 }
