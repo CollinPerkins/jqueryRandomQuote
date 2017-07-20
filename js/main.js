@@ -8,6 +8,8 @@ var quoteObj = {
 }
 
 $('.newQuote').click(function() {
+  $('.quote').html("...Loading");
+  $('.quoteAuthor').html("");
   getQuote();
 });
 
@@ -18,7 +20,11 @@ function getQuote() {
       data: "method=getQuote&lang=en&format=jsonp&jsonp=?",
       success: function( response ) {
         quoteObj.quote = response.quoteText;
-        quoteObj.quoteAuthor = response.quoteAuthor;
+        if(!response.quoteAuthor) {
+          quoteObj.quoteAuthor = "Unknown Author";
+        } else {
+          quoteObj.quoteAuthor = response.quoteAuthor;
+        }
         insertHtml();
       }
   });
